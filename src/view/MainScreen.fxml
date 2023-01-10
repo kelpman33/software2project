@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <Label layoutX="230.0" layoutY="14.0" text="Main Screen">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="custBtn" layoutX="264.0" layoutY="142.0" mnemonicParsing="false" onAction="#onCustBtn" text="Customers" />
+      <Button fx:id="appBtn" layoutX="254.0" layoutY="172.0" mnemonicParsing="false" onAction="#onAppBtn" text="Appointments" />
+      <Button fx:id="exitBtn" layoutX="282.0" layoutY="232.0" mnemonicParsing="false" onAction="#onExit" text="Exit" />
+      <Button fx:id="reportsBtn" layoutX="271.0" layoutY="202.0" mnemonicParsing="false" onAction="#onReports" text="Reports" />
+   </children>
+</AnchorPane>

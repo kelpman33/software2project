@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersController">
+   <children>
+      <Label layoutX="405.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="13.0" layoutY="91.0" text="Customer Name:" />
+      <Label layoutX="13.0" layoutY="119.0" text="Address:" />
+      <Label layoutX="13.0" layoutY="147.0" text="Postal Code:" />
+      <Label layoutX="13.0" layoutY="175.0" text="Phone Number:" />
+      <TextField fx:id="custNameField" layoutX="113.0" layoutY="87.0" />
+      <TextField fx:id="addressField" layoutX="113.0" layoutY="115.0" />
+      <TextField fx:id="postCodeField" layoutX="113.0" layoutY="143.0" />
+      <TextField fx:id="phoneNumField" layoutX="113.0" layoutY="171.0" />
+      <TextField fx:id="custIDField" layoutX="113.0" layoutY="59.0" />
+      <Label layoutX="13.0" layoutY="63.0" text="Customer ID:" />
+      <Button fx:id="cancelBtn" layoutX="15.0" layoutY="356.0" mnemonicParsing="false" onAction="#onCancel" text="Back" />
+      <TableView fx:id="custTable" layoutX="269.0" layoutY="56.0" onMouseClicked="#onClicked" prefHeight="326.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="28.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="121.19998168945312" text="Name" />
+            <TableColumn fx:id="addressColumn" prefWidth="97.60000610351562" text="Address" />
+            <TableColumn fx:id="postalColumn" minWidth="0.0" prefWidth="66.5999755859375" text="Postal" />
+            <TableColumn fx:id="phoneColumn" prefWidth="119.0" text="Phone" />
+            <TableColumn fx:id="countryColumn" prefWidth="103.20001220703125" text="Country" />
+            <TableColumn fx:id="divisionColumn" prefWidth="76.0" text="Division" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="110.0" layoutY="356.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+      <Button fx:id="delBtn" layoutX="212.0" layoutY="356.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+      <Button fx:id="modBtn" layoutX="153.0" layoutY="356.0" mnemonicParsing="false" onAction="#onModify" text="Update" />
+      <ComboBox fx:id="countryCBox" layoutX="112.0" layoutY="199.0" onAction="#onCountryCBoxClick" prefWidth="150.0" promptText="Required" />
+      <Label layoutX="13.0" layoutY="204.0" text="Country:" />
+      <ComboBox fx:id="divCBox" layoutX="112.0" layoutY="227.0" prefWidth="150.0" promptText="Required" />
+      <Label layoutX="13.0" layoutY="231.0" text="Division:" />
+   </children>
+</AnchorPane>

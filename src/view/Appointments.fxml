@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1113.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+   <children>
+      <Label layoutX="476.0" layoutY="14.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="9.0" layoutY="361.0" mnemonicParsing="false" onAction="#onBack" text="Back" />
+      <TableView fx:id="appTable" layoutX="228.0" layoutY="49.0" onMouseClicked="#onClicked" prefHeight="346.0" prefWidth="880.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="22.800018310546875" text="ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="66.20001220703125" text="Title" />
+            <TableColumn fx:id="descripColumn" prefWidth="118.4000244140625" text="Description" />
+            <TableColumn fx:id="locationColumn" prefWidth="94.4000244140625" text="Location" />
+            <TableColumn fx:id="startColumn" prefWidth="159.19998168945312" text="Start" />
+            <TableColumn fx:id="endColumn" prefWidth="153.60003662109375" text="End" />
+            <TableColumn fx:id="typeColumn" prefWidth="105.0" text="Type" />
+            <TableColumn fx:id="contactColumn" prefWidth="49.0" text="Contact" />
+            <TableColumn fx:id="customerColumn" prefWidth="61.59991455078125" text="Customer" />
+            <TableColumn fx:id="userColumn" prefWidth="40.2000732421875" text="User" />
+        </columns>
+      </TableView>
+      <Label layoutX="13.0" layoutY="53.0" text="ID:" />
+      <Label layoutX="12.0" layoutY="80.0" text="Title:" />
+      <Label layoutX="11.0" layoutY="107.0" text="Description:" />
+      <Label layoutX="11.0" layoutY="134.0" text="Location:" />
+      <Label layoutX="11.0" layoutY="161.0" text="Type:" />
+      <TextField fx:id="idField" layoutX="76.0" layoutY="49.0" />
+      <TextField fx:id="titleField" layoutX="76.0" layoutY="76.0" />
+      <TextField fx:id="descripField" layoutX="76.0" layoutY="103.0" />
+      <ComboBox fx:id="typeCBox" layoutX="75.0" layoutY="157.0" prefWidth="150.0" />
+      <ComboBox fx:id="locationCBox" layoutX="75.0" layoutY="130.0" prefWidth="150.0" />
+      <Label layoutX="11.0" layoutY="188.0" text="Contact:" />
+      <ComboBox fx:id="contactCBox" layoutX="75.0" layoutY="184.0" prefWidth="150.0" promptText="Required" />
+      <Label layoutX="11.0" layoutY="243.0" text="Start Time:" />
+      <Label layoutX="12.0" layoutY="270.0" text="End Time:" />
+      <ComboBox fx:id="startCBox" layoutX="75.0" layoutY="239.0" prefWidth="150.0" />
+      <ComboBox fx:id="endCBox" layoutX="75.0" layoutY="266.0" prefWidth="150.0" />
+      <Label layoutX="10.0" layoutY="297.0" text="Customer:" />
+      <ComboBox fx:id="custCBox" layoutX="75.0" layoutY="293.0" prefWidth="150.0" promptText="Required" />
+      <Label layoutX="12.0" layoutY="216.0" text="Date:" />
+      <DatePicker fx:id="dateBox" layoutX="75.0" layoutY="211.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button fx:id="delBtn" layoutX="174.0" layoutY="361.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+      <Button fx:id="updateBtn" layoutX="117.0" layoutY="361.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+      <Button fx:id="addBtn" layoutX="77.0" layoutY="361.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+      <RadioButton fx:id="weekBtn" layoutX="12.0" layoutY="23.0" mnemonicParsing="false" onAction="#onWeek" text="Weekly">
+         <toggleGroup>
+            <ToggleGroup fx:id="weekOrMonth" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthBtn" layoutX="82.0" layoutY="23.0" mnemonicParsing="false" onAction="#onMonth" text="Monthly" toggleGroup="$weekOrMonth" />
+      <RadioButton fx:id="allBtn" layoutX="156.0" layoutY="23.0" mnemonicParsing="false" onAction="#onAll" selected="true" text="All" toggleGroup="$weekOrMonth" />
+      <ComboBox fx:id="userCBox" layoutX="75.0" layoutY="320.0" prefWidth="150.0" promptText="Current if Blank" />
+      <Label layoutX="11.0" layoutY="324.0" text="User:" />
+   </children>
+</AnchorPane>
